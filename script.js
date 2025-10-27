@@ -7,11 +7,7 @@ const eta = parseInt(etaUt);
 let risultato = null;
 let price = distanza * 0.21 ;
 
-
-//
-
-
-//svolgimento
+//condizioni 
 
 if (eta < 18) {
     risultato = price - (price / 100) * 20 ;
