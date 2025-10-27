@@ -5,14 +5,11 @@ const etaUt = prompt("Inserisci la tua età");
 const distanza = parseInt(distUt);
 const eta = parseInt(etaUt);
 let risultato = null;
-let price = distanza * 0.21
+let price = distanza * 0.21 ;
 
 
 //
 
-console.log(distanza);
-console.log(eta);
-console.log(price)
 
 //svolgimento
 
@@ -21,11 +18,13 @@ if (eta < 18) {
 } else if (eta >= 18 && eta < 65) {
     risultato = price; 
 } else if (eta >= 65) {
-    risultato = price - (price / 100) * 60 ;
+    risultato = price - (price / 100) * 40 ;
 }
 
+//risultato 
 
-alert(risultato);
+alert(risultato.toFixed(2)) ;
+
 
 
 
