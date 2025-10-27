@@ -1,4 +1,4 @@
-// inserire i età e km utente 
+// Utente inserisce età e Km 
 
 const distUt = prompt("Inserisci i Km che vuoi percorrere");
 const etaUt = prompt("Inserisci la tua età");
@@ -23,7 +23,9 @@ if (eta < 18) {
 
 //risultato 
 
-alert(risultato.toFixed(2)) ;
+/*alert(risultato.toFixed(2)) ;*/
+
+document.getElementById("risultato").innerHTML = risultato.toFixed(2);
 
 
 
