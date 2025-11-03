@@ -37,4 +37,4 @@ for (i=0 ; i< numberOfPassengers ; i++) {
 
 let stampaInPagina = prezzi.join(', ')
 
-document.getElementById("risultato").innerHTML =`I prezzi di ogni singolo biglietto sono € ${stampaInPagina}` ;
+document.getElementById("risultato").innerHTML =`I prezzi di ogni biglietto sono ${stampaInPagina}` ;
