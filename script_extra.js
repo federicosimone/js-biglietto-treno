@@ -8,18 +8,30 @@
 
 const passengers = prompt("Inserisci il numero di passeggeri") ;
 const numberOfPassengers = parseInt(passengers) ;
-console.log(numberOfPassengers) ;
 
 let distance = null ;
 let age = null ;
-let distanza = parseInt(distance)
-let price = distanza * 0.21 ;
+let price= null ;
 
+const prezzi = []
 
 for (i=0 ; i< numberOfPassengers ; i++) {
+    let risultato = null ;
     distance = prompt("Inserisci la distanza da percorrere") ;
     age = prompt("Inserisci la tua età") ;
-
+    let distanza = parseInt(distance) ;
+    let eta = parseInt(age) ;
+    let price = distanza * 0.21 ;
+    if (eta < 18) {
+    risultato = price - (price / 100) * 20 ;
+    } else if (eta >= 18 && eta < 65) {
+    risultato = price; 
+    } else if (eta >= 65) {
+    risultato = price - (price / 100) * 40 ;
+    }
+    prezzi.push(risultato)
 }
 
-console.log(price)
+console.log(prezzi) ;
+
+document.getElementById("risultato").innerHTML =`I prezzi di ogni singolo biglietto sono € ${prezzi}` ;
