@@ -15,6 +15,7 @@ let price= null ;
 
 const prezzi = []
 
+
 for (i=0 ; i< numberOfPassengers ; i++) {
     let risultato = null ;
     distance = prompt("Inserisci la distanza da percorrere") ;
@@ -32,6 +33,8 @@ for (i=0 ; i< numberOfPassengers ; i++) {
     prezzi.push(risultato)
 }
 
-console.log(prezzi) ;
 
-document.getElementById("risultato").innerHTML =`I prezzi di ogni singolo biglietto sono € ${prezzi}` ;
+
+let stampaInPagina = prezzi.join(', ')
+
+document.getElementById("risultato").innerHTML =`I prezzi di ogni singolo biglietto sono € ${stampaInPagina}` ;
